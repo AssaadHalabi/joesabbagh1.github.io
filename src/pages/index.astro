@@ -8,7 +8,7 @@ import { Card } from "@eliancodes/brutal-ui"
 
 const Languages = ["JavaScript", "TypeScript", "Java", "bash", "C#", "C++", "C"]
 
-const FrontEnd = ["HTML/CSS", "React", "Next", "Vue", "Tailwind"]
+const FrontEnd = ["HTML", "CSS", "React", "Next", "Vue", "Tailwind"]
 
 const BackEnd = ["Node", "Express", "Trpc", ".NET", "SQL"]
 
@@ -38,48 +38,48 @@ const DevOps = ["AWS", "Docker", "Git"]
 
       <section id="skills" class="mt-8">
         <Card color="#a3e635">
-          <h2 class="text-4xl md:text-5xl lg:text-7xl mb-8 poppins">
+          <h2 class="text-4xl font-550 md:text-5xl lg:text-7xl mb-8 poppins">
             Technical Skills
           </h2>
           <div
-            class="grid grid-cols-2 md:grid-cols-4 grid-justify-between items-start gap-14"
+            class="grid grid-cols-1 md:grid-cols-4 grid-justify-between items-start gap-6 md:gap-14"
           >
             <Card color="#facc15">
-              <div class="px-2 md:px-4">
-                <h1 class="text-2xl md:text-3xl lg:text-5xl dm-serif">
+              <div class="md:px-4">
+                <h1 class="text-3xl font-500 md:text-3xl lg:text-5xl outfit">
                   Languages
                 </h1>
-                <ul class="mt-2 md:mt-4 text-xl md:text-2xl lg:text-3xl">
+                <ul class="mt-2 md:mt-4 text-2xl md:text-2xl lg:text-3xl">
                   {Languages.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
               </div>
             </Card>
             <Card color="#fb923c">
-              <div class="px-2 md:px-4">
-                <h1 class="text-2xl md:text-3xl lg:text-5xl dm-serif">
+              <div class="md:px-4">
+                <h1 class="text-3xl font-500 md:text-3xl lg:text-5xl outfit">
                   Front End
                 </h1>
-                <ul class="mt-2 md:mt-4 text-xl md:text-2xl lg:text-3xl">
+                <ul class="mt-2 md:mt-4 text-2xl md:text-2xl lg:text-3xl">
                   {FrontEnd.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
               </div>
             </Card>
             <Card color="#e879f9">
-              <div class="px-2 md:px-4">
-                <h1 class="text-2xl md:text-3xl lg:text-5xl dm-serif">
+              <div class="md:px-4">
+                <h1 class="text-3xl font-500 md:text-3xl lg:text-5xl outfit">
                   Back End
                 </h1>
-                <ul class="mt-2 md:mt-4 text-xl md:text-2xl lg:text-3xl">
+                <ul class="mt-2 md:mt-4 text-2xl md:text-2xl lg:text-3xl">
                   {BackEnd.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
               </div>
             </Card>
             <Card color="#38bdf8">
-              <div class="px-2 md:px-4">
-                <h1 class="text-2xl md:text-3xl lg:text-5xl dm-serif">
+              <div class="md:px-4">
+                <h1 class="text-3xl font-500 md:text-3xl lg:text-5xl outfit">
                   DevOps
                 </h1>
-                <ul class="mt-2 md:mt-4 text-xl md:text-2xl lg:text-3xl">
+                <ul class="mt-2 md:mt-4 text-2xl md:text-2xl lg:text-3xl">
                   {DevOps.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
               </div>
