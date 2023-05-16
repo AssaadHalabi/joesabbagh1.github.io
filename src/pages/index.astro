@@ -1,0 +1,92 @@
+---
+import Layout from "@layouts/Default.astro"
+import RecentBlogPosts from "@components/generic/RecentBlogPosts.astro"
+import MobileSocials from "@components/home/MobileSocials.astro"
+// import { Pill } from "@eliancodes/brutal-ui"
+// import { Button } from "@eliancodes/brutal-ui"
+import { Card } from "@eliancodes/brutal-ui"
+
+const Languages = ["JavaScript", "TypeScript", "Java", "bash", "C#", "C++", "C"]
+
+const FrontEnd = ["HTML/CSS", "React", "Next", "Vue", "Tailwind"]
+
+const BackEnd = ["Node", "Express", "Trpc", ".NET", "SQL"]
+
+const DevOps = ["AWS", "Docker", "Git"]
+---
+
+<Layout title="Home" pageTitle="Home" description="Portfolio showcase">
+  <main class="bg-pink p-6">
+    <MobileSocials />
+    <section id="about" class="mt-4">
+      <div>
+        <Card color="#22d3ee">
+          <div class="flex flex-col justify-between items-start gap-4">
+            <p class="outfit text-4xl md:text-5xl lg:text-7xl">
+              About
+              <span class="text-white">Me</span>
+            </p>
+            <p class="md:mt-2 outfit text-xl md:text-2xl lg:text-4xl">
+              Full Stack developer, passionate about the web, and currently
+              learning different DevOps technologies.
+            </p>
+          </div>
+        </Card>
+      </div>
+
+      <RecentBlogPosts />
+
+      <section id="skills" class="mt-8">
+        <Card color="#a3e635">
+          <h2 class="text-4xl md:text-5xl lg:text-7xl mb-8 poppins">
+            Technical Skills
+          </h2>
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 grid-justify-between items-start gap-14"
+          >
+            <Card color="#facc15">
+              <div class="px-2 md:px-4">
+                <h1 class="text-2xl md:text-3xl lg:text-5xl dm-serif">
+                  Languages
+                </h1>
+                <ul class="mt-2 md:mt-4 text-xl md:text-2xl lg:text-3xl">
+                  {Languages.map((item) => <li class="sanchez">{item}</li>)}
+                </ul>
+              </div>
+            </Card>
+            <Card color="#fb923c">
+              <div class="px-2 md:px-4">
+                <h1 class="text-2xl md:text-3xl lg:text-5xl dm-serif">
+                  Front End
+                </h1>
+                <ul class="mt-2 md:mt-4 text-xl md:text-2xl lg:text-3xl">
+                  {FrontEnd.map((item) => <li class="sanchez">{item}</li>)}
+                </ul>
+              </div>
+            </Card>
+            <Card color="#e879f9">
+              <div class="px-2 md:px-4">
+                <h1 class="text-2xl md:text-3xl lg:text-5xl dm-serif">
+                  Back End
+                </h1>
+                <ul class="mt-2 md:mt-4 text-xl md:text-2xl lg:text-3xl">
+                  {BackEnd.map((item) => <li class="sanchez">{item}</li>)}
+                </ul>
+              </div>
+            </Card>
+            <Card color="#38bdf8">
+              <div class="px-2 md:px-4">
+                <h1 class="text-2xl md:text-3xl lg:text-5xl dm-serif">
+                  DevOps
+                </h1>
+                <ul class="mt-2 md:mt-4 text-xl md:text-2xl lg:text-3xl">
+                  {DevOps.map((item) => <li class="sanchez">{item}</li>)}
+                </ul>
+              </div>
+            </Card>
+          </div>
+        </Card>
+      </section>
+    </section>
+  </main>
+</Layout>

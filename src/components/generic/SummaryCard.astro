@@ -1,0 +1,61 @@
+---
+interface Props {
+  title: string
+  description: string
+}
+import { Card } from "@eliancodes/brutal-ui"
+
+const { title, description } = Astro.props
+---
+
+<Card color="white">
+  <my-ass>
+    <h3 class="poppins text-2xl md:text-4xl mb-2 md:mb-4">{title}</h3>
+    <p class="poppins md:text-lg limitClass" id="description">{description}</p>
+    <button class="show">Show More</button>
+  </my-ass>
+  <slot />
+</Card>
+
+<script>
+  class ass extends HTMLElement {
+    constructor() {
+      super()
+
+      const button = this.querySelector("button")
+      const paragraph = this.querySelector("p")
+
+      const styles = window.getComputedStyle(paragraph)
+      const height = parseInt(styles.getPropertyValue("height"), 10)
+      const lineHeight = parseInt(styles.getPropertyValue("line-height"), 10)
+      const text = paragraph.textContent.trim()
+      const numEmptyLines = text.match(/\n\s*\n/g)?.length || 0
+      const numLines = Math.ceil(height / lineHeight) + numEmptyLines
+
+      let more = false
+
+      if (numLines > 4) {
+        paragraph.style.display = "-webkit-box"
+        paragraph.style.webkitLineClamp = 4
+        paragraph.style.webkitBoxOrient = "vertical"
+        paragraph.style.overflow = "hidden"
+        paragraph.style.whiteSpace = "pre-line"
+
+        button?.addEventListener("click", () => {
+          if (!more) {
+            paragraph.style.webkitLineClamp = 100
+            button.innerText = "Show Less"
+          } else {
+            paragraph.style.webkitLineClamp = 4
+            button.innerText = "Show more"
+          }
+          more = !more
+        })
+      } else {
+        button.style.visibility = "hidden"
+      }
+    }
+  }
+
+  customElements.define("my-ass", ass)
+</script>
