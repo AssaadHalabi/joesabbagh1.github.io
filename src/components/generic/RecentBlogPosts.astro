@@ -11,22 +11,22 @@ interface Props {
 const { count } = Astro.props
 
 const posts = await getCollection("projects").then((posts) =>
-  posts.reverse().slice(0, count ?? 3)
+  posts.reverse().slice(0, count)
 )
 ---
 
 <section class="mt-8">
   <Card color="#facc15">
-    <div class="flex justify-between items-start">
-      <h2 class="text-4xl md:text-5xl lg:text-7xl mb-8 dm-serif">
+    <div class="flex items-start justify-between">
+      <h2 class="dm-serif mb-8 text-4xl md:text-5xl lg:text-7xl">
         Recent Projects
       </h2>
-      <div class="md:block hidden">
+      <div class="hidden md:block">
         <Button href="/projects/">Go to projects &rarr;</Button>
       </div>
     </div>
     <BlogList posts={posts} />
-    <div class="flex justify-end mt-8 md:hidden">
+    <div class="mt-8 flex justify-end md:hidden">
       <Button href="/projects/">Go to projects &rarr;</Button>
     </div>
   </Card>

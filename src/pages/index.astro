@@ -21,12 +21,12 @@ const DevOps = ["AWS", "Docker", "Git"]
     <section id="about" class="mt-4">
       <div>
         <Card color="#22d3ee">
-          <div class="flex flex-col justify-between items-start gap-4">
+          <div class="flex flex-col items-start justify-between gap-4">
             <p class="outfit text-4xl md:text-5xl lg:text-7xl">
               About
               <span class="text-white">Me</span>
             </p>
-            <p class="md:mt-2 outfit text-xl md:text-2xl lg:text-4xl">
+            <p class="outfit text-xl md:mt-2 md:text-2xl lg:text-4xl">
               Full Stack developer, passionate about the web, and currently
               learning different DevOps technologies.
             </p>
@@ -34,52 +34,52 @@ const DevOps = ["AWS", "Docker", "Git"]
         </Card>
       </div>
 
-      <RecentBlogPosts />
+      <RecentBlogPosts count={4} />
 
       <section id="skills" class="mt-8">
         <Card color="#a3e635">
-          <h2 class="text-4xl font-550 md:text-5xl lg:text-7xl mb-8 poppins">
+          <h2 class="font-550 poppins mb-8 text-4xl md:text-5xl lg:text-7xl">
             Technical Skills
           </h2>
           <div
-            class="grid grid-cols-1 md:grid-cols-4 grid-justify-between items-start gap-6 md:gap-14"
+            class="grid-justify-between grid grid-cols-1 items-start gap-6 md:grid-cols-4 md:gap-14"
           >
             <Card color="#facc15">
               <div class="md:px-4">
-                <h1 class="text-3xl font-500 md:text-3xl lg:text-5xl outfit">
+                <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">
                   Languages
                 </h1>
-                <ul class="mt-2 md:mt-4 text-2xl md:text-2xl lg:text-3xl">
+                <ul class="mt-2 text-2xl md:mt-4 md:text-2xl lg:text-3xl">
                   {Languages.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
               </div>
             </Card>
             <Card color="#fb923c">
               <div class="md:px-4">
-                <h1 class="text-3xl font-500 md:text-3xl lg:text-5xl outfit">
+                <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">
                   Front End
                 </h1>
-                <ul class="mt-2 md:mt-4 text-2xl md:text-2xl lg:text-3xl">
+                <ul class="mt-2 text-2xl md:mt-4 md:text-2xl lg:text-3xl">
                   {FrontEnd.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
               </div>
             </Card>
             <Card color="#e879f9">
               <div class="md:px-4">
-                <h1 class="text-3xl font-500 md:text-3xl lg:text-5xl outfit">
+                <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">
                   Back End
                 </h1>
-                <ul class="mt-2 md:mt-4 text-2xl md:text-2xl lg:text-3xl">
+                <ul class="mt-2 text-2xl md:mt-4 md:text-2xl lg:text-3xl">
                   {BackEnd.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
               </div>
             </Card>
             <Card color="#38bdf8">
               <div class="md:px-4">
-                <h1 class="text-3xl font-500 md:text-3xl lg:text-5xl outfit">
+                <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">
                   DevOps
                 </h1>
-                <ul class="mt-2 md:mt-4 text-2xl md:text-2xl lg:text-3xl">
+                <ul class="mt-2 text-2xl md:mt-4 md:text-2xl lg:text-3xl">
                   {DevOps.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
               </div>
