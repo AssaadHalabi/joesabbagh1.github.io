@@ -12,6 +12,6 @@ const posts = await getCollection("projects")
   pageTitle="Projects"
 >
   <main class="bg-green p-6">
-    <BlogList posts={posts} />
+    <BlogList posts={posts.reverse()} />
   </main>
 </Layout>
