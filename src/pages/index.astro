@@ -4,19 +4,11 @@ import RecentBlogPosts from "@components/generic/RecentBlogPosts.astro"
 import MobileSocials from "@components/home/MobileSocials.astro"
 // import { Pill } from "@eliancodes/brutal-ui"
 // import { Button } from "@eliancodes/brutal-ui"
-import { Card } from "@eliancodes/brutal-ui"
+import { Button, Card } from "@eliancodes/brutal-ui"
 
 const Languages = ["JavaScript", "TypeScript", "Java", "bash", "C#", "C++", "C"]
 
-const FrontEnd = [
-  "HTML",
-  "CSS",
-  "React",
-  "React Native",
-  "Next",
-  "Vue",
-  "Tailwind",
-]
+const FrontEnd = ["HTML", "CSS", "React", "React Native", "Next", "Vue", "Tailwind"]
 
 const BackEnd = ["Node", "Express", "Go", "Trpc", ".NET", "SQL"]
 
@@ -35,8 +27,7 @@ const DevOps = ["AWS", "Docker", "Git"]
               <span class="text-white">Me</span>
             </p>
             <p class="outfit text-xl md:mt-2 md:text-2xl lg:text-4xl">
-              Full Stack developer, passionate about the web, and currently
-              learning different DevOps technologies.
+              Full Stack developer, passionate about the web, and currently learning different DevOps technologies.
             </p>
           </div>
         </Card>
@@ -46,17 +37,11 @@ const DevOps = ["AWS", "Docker", "Git"]
 
       <section id="skills" class="mt-8">
         <Card color="#a3e635">
-          <h2 class="font-550 poppins mb-8 text-4xl md:text-5xl lg:text-7xl">
-            Technical Skills
-          </h2>
-          <div
-            class="grid-justify-between grid grid-cols-1 items-start gap-6 md:grid-cols-4 md:gap-14"
-          >
+          <h2 class="font-550 poppins mb-8 text-4xl md:text-5xl lg:text-7xl">Technical Skills</h2>
+          <div class="grid-justify-between grid grid-cols-1 items-start gap-6 md:grid-cols-4 md:gap-14">
             <Card color="#facc15">
               <div class="md:px-4">
-                <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">
-                  Languages
-                </h1>
+                <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">Languages</h1>
                 <ul class="mt-2 text-2xl md:mt-4 md:text-2xl lg:text-3xl">
                   {Languages.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
@@ -64,9 +49,7 @@ const DevOps = ["AWS", "Docker", "Git"]
             </Card>
             <Card color="#fb923c">
               <div class="md:px-4">
-                <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">
-                  Front End
-                </h1>
+                <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">Front End</h1>
                 <ul class="mt-2 text-2xl md:mt-4 md:text-2xl lg:text-3xl">
                   {FrontEnd.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
@@ -74,9 +57,7 @@ const DevOps = ["AWS", "Docker", "Git"]
             </Card>
             <Card color="#e879f9">
               <div class="md:px-4">
-                <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">
-                  Back End
-                </h1>
+                <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">Back End</h1>
                 <ul class="mt-2 text-2xl md:mt-4 md:text-2xl lg:text-3xl">
                   {BackEnd.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
@@ -84,14 +65,25 @@ const DevOps = ["AWS", "Docker", "Git"]
             </Card>
             <Card color="#38bdf8">
               <div class="md:px-4">
-                <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">
-                  DevOps
-                </h1>
+                <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">DevOps</h1>
                 <ul class="mt-2 text-2xl md:mt-4 md:text-2xl lg:text-3xl">
                   {DevOps.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
               </div>
             </Card>
+          </div>
+        </Card>
+      </section>
+      <section id="skills" class="mt-8">
+        <Card color="#38bdf8">
+          <h2 class="font-550 poppins mb-8 text-4xl md:text-5xl lg:text-7xl">Certifications</h2>
+          <div class="flex flex-col gap-3 underline">
+            <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/fbd99b35578848dd807faaa3523f0a29" class="w-fit text-2xl"
+              >AWS Certified DevOps Engineer - Professional Certification</a
+            >
+            <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/ELH3FMSL5JE4Q33V" class="w-fit text-2xl"
+              >AWS Certified Developer - Associate Certification</a
+            >
           </div>
         </Card>
       </section>
