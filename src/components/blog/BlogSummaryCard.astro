@@ -30,7 +30,7 @@ const { post } = Astro.props
     <div class="flex items-center justify-between">
       <ul class="mt-2 flex gap-4">
         {
-          post.data.tags.map((tag) => {
+          post.data.tags.map((tag: any) => {
             return (
               <a class="sanchez">
                 <Pill>{tag}</Pill>
