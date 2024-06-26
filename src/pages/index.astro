@@ -6,13 +6,15 @@ import MobileSocials from "@components/home/MobileSocials.astro"
 // import { Button } from "@eliancodes/brutal-ui"
 import { Card } from "@eliancodes/brutal-ui"
 
+const activities = ["Preparing to take the Certified Kubernetes Administrator exam"]
+
 const Languages = ["JavaScript", "TypeScript", "Go", "Python", "Bash"]
 
 const FrontEnd = ["HTML/CSS", "React", "Next", "Vue", "Tailwind"]
 
 const BackEnd = ["Node", "Express", "Trpc", ".NET", "SQL"]
 
-const DevOps = ["AWS", "Docker", "Kubernetes", "Git"]
+const DevOps = ["AWS", "Docker", "Kubernetes", "Terraform", "Ansible", "Git"]
 ---
 
 <Layout title="Home" pageTitle="Home" description="Portfolio showcase">
@@ -26,13 +28,40 @@ const DevOps = ["AWS", "Docker", "Kubernetes", "Git"]
               About
               <span class="text-white">Me</span>
             </p>
-            <p class="outfit text-xl md:mt-2 md:text-2xl lg:text-4xl">
-              Full Stack developer, curious about DevOps technologies, currently learning Kubernetes and planning to get the Kubernetes developer
-              developer in the upcoming months.
-            </p>
+            <p class="outfit text-xl md:mt-2 md:text-2xl lg:text-4xl">Full Stack developer, curious about DevOps technologies.</p>
           </div>
         </Card>
       </div>
+
+      <section id="activities" class="mt-8">
+        <Card color="#fb923c">
+          <div class="flex flex-col items-start justify-between gap-4">
+            <p class="outfit poppins font-450 text-3xl md:text-5xl lg:text-7xl">Current Activities</p>
+            <ul class="list-roman sanchez flex list-inside flex-col gap-2 text-2xl md:text-2xl lg:text-3xl">
+              <li>Preparing to take the Certified Kubernetes Administrator exam</li>
+              <li>
+                Taking a DevOps bootcamp organized by <a href="https://www.simplilearn.com/" target="_blank" class="underline-offset-3 underline"
+                  >SimpliLearn</a
+                >
+                funded by Forward MENA. The program includes 4 modules:
+                <ul class="font-500 poppins list-initial list-inside pl-6 text-2xl">
+                  <li>Intro to DevOps</li>
+                  <li>Configuration Management using Ansible and Terraform</li>
+                  <li>Docker Certified Associate training</li>
+                  <li>Container Orchestration using Kubernetes</li>
+                </ul>
+              </li>
+              <li>
+                Reading <a
+                  href="https://www.oreilly.com/library/view/kubernetes-cookbook/9781491979679/"
+                  target="_blank"
+                  class="underline-offset-3 underline">Kubernetes Cookbook: Building Cloud Native Applications</a
+                >
+              </li>
+            </ul>
+          </div>
+        </Card>
+      </section>
 
       <RecentBlogPosts count={4} />
 
@@ -44,7 +73,7 @@ const DevOps = ["AWS", "Docker", "Kubernetes", "Git"]
               <div class="md:px-4">
                 <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">Languages</h1>
                 <ul class="mt-2 text-2xl md:mt-4 md:text-2xl lg:text-3xl">
-                  {Languages.map((item) => <li class="sanchez">{item}</li>)}
+                  {Languages.map((item) => <li class="sanchez">- {item}</li>)}
                 </ul>
               </div>
             </Card>
@@ -52,7 +81,7 @@ const DevOps = ["AWS", "Docker", "Kubernetes", "Git"]
               <div class="md:px-4">
                 <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">Front End</h1>
                 <ul class="mt-2 text-2xl md:mt-4 md:text-2xl lg:text-3xl">
-                  {FrontEnd.map((item) => <li class="sanchez">{item}</li>)}
+                  {FrontEnd.map((item) => <li class="sanchez">- {item}</li>)}
                 </ul>
               </div>
             </Card>
@@ -60,7 +89,7 @@ const DevOps = ["AWS", "Docker", "Kubernetes", "Git"]
               <div class="md:px-4">
                 <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">Back End</h1>
                 <ul class="mt-2 text-2xl md:mt-4 md:text-2xl lg:text-3xl">
-                  {BackEnd.map((item) => <li class="sanchez">{item}</li>)}
+                  {BackEnd.map((item) => <li class="sanchez">- {item}</li>)}
                 </ul>
               </div>
             </Card>
@@ -68,7 +97,7 @@ const DevOps = ["AWS", "Docker", "Kubernetes", "Git"]
               <div class="md:px-4">
                 <h1 class="font-500 outfit text-3xl md:text-3xl lg:text-5xl">DevOps</h1>
                 <ul class="mt-2 text-2xl md:mt-4 md:text-2xl lg:text-3xl">
-                  {DevOps.map((item) => <li class="sanchez">{item}</li>)}
+                  {DevOps.map((item) => <li class="sanchez">- {item}</li>)}
                 </ul>
               </div>
             </Card>
